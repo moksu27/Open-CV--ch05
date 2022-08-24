@@ -10,10 +10,9 @@ if src is None:
     sys.exit()
 
 cp = (src.shape[1] / 2, src.shape[0] / 2)
-rot = cv2.getRotationMatrix2D(cp, 20, 0.5)
+rot = cv2.getRotationMatrix2D(cp, 20, 0.7) #회전중심좌표, 회전 각도, 스케일
 
 dst = cv2.warpAffine(src, rot, (0, 0))
-
 cv2.imshow('src', src)
 cv2.imshow('dst', dst)
 cv2.waitKey()

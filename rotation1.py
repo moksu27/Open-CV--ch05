@@ -10,7 +10,7 @@ if src is None:
     print('Image load failed!')
     sys.exit()
 
-rad = 20 * math.pi / 180
+rad = 20*math.pi/180
 aff = np.array([[math.cos(rad), math.sin(rad), 0],
                 [-math.sin(rad), math.cos(rad), 0]], dtype=np.float32)
 
